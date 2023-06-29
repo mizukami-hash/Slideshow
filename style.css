@@ -1,14 +1,36 @@
 @charset 'utf-8';
 
-.icon{
-  font-size:200px;
+body {
+  font-family: "Sawarabi Gothic", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 15px;
+}
+
+.icon {
+  font-size: 200px;
 }
 
 main {
   width: 700px;
   margin: 0 auto;
-  position:relative;
-
+  position: relative;
+  margin-top: 30px;
+}
+.text-container {
+  position: absolute;
+  bottom: 10%;
+  right: -5%;
+  width: 200px;
+  height: 100px;
+  padding: 20px 60px 15px 20px;
+  text-align: right;
+  background-color: rgba(240, 203, 203, 0.817);
 }
 
 img {
@@ -19,9 +41,7 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
- 
-  
-  gap:10px;
+  gap: 10px;
 }
 
 #main {
@@ -38,27 +58,30 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-between;
-
 }
 
 /* ボタン */
 nav #play {
-  border-bottom: 2px solid #aaa;
+  border: 2px solid #e8e2e2;
   box-sizing: border-box;
   letter-spacing: 1.5px;
   border-radius: 4px;
   font-size: 12px;
+  color: #e8e2e2;
+  background-color: rgba(121, 120, 120, 0.5);
   padding: 4px;
   text-align: center;
   cursor: pointer;
   user-select: none;
   width: 140px;
   margin-left: auto;
+  z-index: 5;
+  position: absolute;
+  top: 10%;
+  right: 5px;
 }
-#play:hover{
-  border:none;
-  border-bottom: 2px solid #797878;
-  
+#play:hover {
+  border-bottom: 2px solid #e8e2e2;
 }
 
 nav li:hover {
@@ -71,22 +94,21 @@ nav li:hover {
   /* height:200px; */
   font-size: 30px;
   font-weight: 100;
-  position:absolute;
-  top:200px;
-  color:#6c5c5c84;
+  position: absolute;
+  top: 260px;
+  color: #6c5c5c84;
   cursor: pointer;
 }
-#next{
-  right:-10%;
+#next {
+  right: -10%;
 }
-#prev{
-  left:-10%;
+#prev {
+  left: -10%;
 }
-
 
 .thumbnails {
- display:flex;
- justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   gap: 5px;
 }
 
@@ -98,9 +120,77 @@ nav li:hover {
 .thumbnails li:hover,
 .thumbnails li.current {
   opacity: 1;
+  overflow: hidden;
+}
+
+.thumbnails li img:hover {
+  transform: scale(1.4);
 }
 
 .thumbnails img {
   width: 90px;
-  height:50px;
+  height: 50px;
 }
+
+/* animation============================ */
+/* .cover-slide{
+  position:relative;
+  overflow: hidden;
+
+}
+.cover-slide::after{
+  content:'';
+  position:absolute;
+  z-index: 2;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#eaebe689;
+  z-index:1;
+  animation:cover 1.2s 0s forwards ease-in-out;
+  
+}
+@keyframes cover{
+  0%{
+    left:0;
+    right:100%;
+  }
+  50%{
+    left:0;
+    right:0;
+  }
+  100%{
+    left:100%;
+    right:0;
+  }
+}
+
+ .zoom{
+    opacity: 1;
+  }
+
+  .appear .zoom{
+    opacity:1;
+    animation:image 1.2s 0.1s ease-in-out;
+    animation-fill-mode: normal;
+  }
+
+  @keyframes image{
+    0%{
+      opacity:0.3;
+    }
+    50%{
+      opacity:0.5;
+    }
+    50.1%{
+      opacity: 0.7;
+      transform:scale(1.1);
+    }
+    100%{
+      opacity:1;
+    }
+  }
+  .appear .img{
+    opacity:1;
+  } */
