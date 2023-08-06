@@ -1,289 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Noto+Sans+JP:wght@300&family=Sawarabi+Gothic&display=swap"
-      rel="stylesheet"
-    />
+    <meta charset="utf-8" />
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="shortcut icon" href="./images/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/all.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap"
       rel="stylesheet"
-      href="css/tab.css"
-      media="screen and (max-width:768px)"
     />
-    <link
-      rel="stylesheet"
-      href="css/sp.css"
-      media="screen and (max-width:425px)"
-    />
-    <title>JavaScript</title>
   </head>
-
   <body>
-    <!--  -->
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <nav class="globalMenuSp">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <!--  -->
-
-    <header id="header">
-      <ul class="lead">
-        <li class="animoBorderLeftRight"><a href="#">Home</a></li>
-        <li class="animoBorderLeftRight"><a href="#about">About</a></li>
-        <li class="animoBorderLeftRight"><a href="#works">Works</a></li>
-        <li class="animoBorderLeftRight"><a href="#contact">Contact</a></li>
-      </ul>
-    </header>
-
     <main>
-      <div class="hero">
-        <h2>
-          初めて作る<br />
-          JavaScriptミニアプリ10
-        </h2>
+      <div class="container appear">
+        <div class="cover-slide">
+          <h1>Memories of 2020</h1>
+          <img id="main" class="zoom" alt="スライドショーのメイン画像" />
+        </div>
+        <div class="text-container">
+          <h2 id="date">2020 memories</h2>
+          <h3 id="title">Pictures</h3>
+        </div>
       </div>
+      <nav>
+        <ul>
+          <li id="play">slide show</li>
+          <li id="prev">&lt;&lt;</li>
+          <li id="next">&gt;&gt;</li>
+        </ul>
+      </nav>
 
-      <section class="about sec triangle">
-        <div class="container">
-          <h3 class="title" id="about">About</h3>
-          <h4 class="jp">- 概要 -</h4>
-          .
-          <p>
-            こんにちは、制作者の水上と申します。<br />
-            このサイトは初学者の私が初めて制作したJavaScriptのミニアプリと、その制作過程をまとめたものになります。<br />私は2023年2月ごろから半年ほど独学でHTML/CSS/JavaScriptの学習をしているのですが、JavaScriptの学習を始めてから一気に難易度が上がり、思うように進まず苦戦していました。
-          </p>
-
-          <p class="mark">
-            <img
-              src="./images/speechbubble.png"
-              alt="吹き出し"
-              id="icon"
-            /><span
-              >JavaScriptの文法を一通り学んだけれど身についているか不安・・・</span
-            >
-          </p>
-          <p class="mark">
-            <img
-              src="./images/speechbubble.png"
-              alt="吹き出し"
-              id="icon"
-            /><span
-              >なにか制作してみたいけど、何をどう作ればいいのかわからない</span
-            >
-          </p>
-          <p>
-            このような悩みを抱えて自信を無くすばかりだったため、同じように悩む方の役立てるものがあればと思い制作に至りました。
-            このサイトで紹介しているミニアプリは、HTML1ヶ月/CSS1ヶ月/JavaScriptを2ヶ月勉強した段階で作り始めている初学者向けの内容ですが、基礎を終えて次のステップへ進む方にはぴったりの内容かと思います。<br />
-            自分自身まだまだ勉強することの多い身ですが、自信のない状態でも少しずつアウトプットをすることと、コードをとにかくたくさん書くことで未経験でも着実に知識を身に着けることができると実感しています。
-            <br />各アプリの詳細ページにて、学習内容と参考サイトをそれぞれ紹介しています。
-            学習の一例として、皆様の参考になれば幸いです。
-          </p>
-
-          <h4 class="jp">- 制作者 -</h4>
-          <div class="creator">
-            <img src="images/aboutme.png" alt="" />
-            <div class="text">
-              <h5>Mizukami</h5>
-              <p>
-                北陸出身の29歳です。元々は営業畑の人間で、WEB制作・プログラミングの知識はゼロからのスタートでした。
-                20代最後のキャリアチェンジを目指し、一念発起して会社を退職し学習を開始しています。
-                自分の手でWEBページやアプリを作れる楽しさにはまって、コードを書くことが大好きになりました。
-              </p>
-            </div>
-            <!-- creator -->
-          </div>
-          <!-- text -->
-        </div>
-        <!-- container -->
-      </section>
-
-      <section class="works sec">
-        <h3 id="works" class="title">Works</h3>
-
-        <div class="container work-items">
-          <div class="item animate">
-            <a href="./works/memo.html">
-              <img src="./images/memo.PNG" alt="メモ帳アプリの画像" />
-              <div class="item-content">
-                <p class="item-cat">01 メモ帳アプリ</p>
-                <p class="item-text">
-                  難易度：★★★<br />
-                  リロードしても消えないメモ帳アプリ
-                </p>
-                <p class="item-date">2023.07</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item animate">
-            <a href="./works/drawing.html">
-              <img src="./images/drawing.png" alt="お絵描きアプリの画像" />
-              <div class="item-content">
-                <p class="item-cat">02 お絵描きアプリ</p>
-                <p class="item-text">
-                  難易度：★★<br />
-                  canvas要素を使ったお絵描きアプリ
-                </p>
-                <p class="item-date">2023.07</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item animate">
-            <a href="./works/drum.html">
-              <img src="./images/drum.png" alt="ドラムアプリの画像" />
-              <div class="item-content">
-                <p class="item-cat">03 ドラムアプリ</p>
-                <p class="item-text">
-                  難易度：★<br />
-                  キーを押すと音が鳴るドラムアプリ
-                </p>
-                <p class="item-date">2023.07</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item animate">
-            <a href="./works/wheather.html">
-              <img src="./images/wheather.png" alt="天気予報アプリの画像" />
-              <div class="item-content">
-                <p class="item-cat">04 天気予報アプリ</p>
-                <p class="item-text">
-                  難易度：★★<br />
-                  リアルタイムの天気予報を自動で更新
-                </p>
-                <p class="item-date">2023.07</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item animate">
-            <a href="./works/timer.html">
-              <img src="./images/timer.PNG" alt="タイマーの画像" />
-              <div class="item-content">
-                <p class="item-cat">05 カウントダウンタイマー</p>
-                <p class="item-text">
-                  難易度：★★<br />
-                  開始時間を時間・分・秒で指定できるタイマー
-                </p>
-                <p class="item-date">2023.06</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item animate">
-            <a href="./works/pong-game.html">
-              <img src="./images/pong.png" alt="ピンポンゲームの画像" />
-              <div class="item-content">
-                <p class="item-cat">06 ピンポンゲーム</p>
-                <p class="item-text">
-                  難易度：★★<br />
-                  canvas要素で描画したピンポンゲーム
-                </p>
-                <p class="item-date">2023.07</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item animate">
-            <a href="./works/todo.html">
-              <img src="./images/todo.PNG" alt="Todoリストの画像" />
-              <div class="item-content">
-                <p class="item-cat">07 Todoリスト</p>
-                <p class="item-text">
-                  難易度：★★<br />
-                  リロードしても消えないTodoリスト
-                </p>
-                <p class="item-date">2023.06</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item animate">
-            <a href="./works/slideshow.html">
-              <img src="./images/slideshow.png" alt="スライドショーの画像" />
-              <div class="item-content">
-                <p class="item-cat">08 スライドショー</p>
-                <p class="item-text">
-                  難易度：★★<br />
-                  自動で画像が切り替わるスライドショーアプリ
-                </p>
-                <p class="item-date">2023.06</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item animate">
-            <a href="./works/omikuji.html">
-              <img src="./images/omikuji.png" alt="おみくじの画像" />
-              <div class="item-content">
-                <p class="item-cat">09 おみくじ</p>
-                <p class="item-text">
-                  難易度：★<br />
-                  ランダムに結果が表示されるおみくじアプリ
-                </p>
-                <p class="item-date">2023.06</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item animate">
-            <a href="./works/tabmenu.html">
-              <img
-                src="images/typing.png"
-                alt="タブメニュー／タイピングゲーム"
-              />
-              <div class="item-content">
-                <p class="item-cat">10 タブメニュー／タイピングゲーム</p>
-                <p class="item-text">
-                  難易度：★★★<br />
-                  タブ切り替えで単語追加ができるタイピングゲーム
-                </p>
-                <p class="item-date">2023.07</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <!-- container   -->
-      </section>
+      <ul class="thumbnails"></ul>
     </main>
 
-    <!-- <a href="#" class="page-top"
-      ><img src="images/arrow.png" alt="" id="pageTopIcon" class="scroll"
-    /></a> -->
-
-    <footer>
-      <div class="footer-inner" id="contact">
-        <p>2023 Mizukami Portfolio</p>
-        <p>
-          <span class="material-symbols-outlined"> mail </span
-          >mizukami.sub@gmail.com
-        </p>
-      </div>
-    </footer>
-    <script src="./js/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
